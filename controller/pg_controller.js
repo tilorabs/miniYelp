@@ -16,11 +16,18 @@ const pool = new Pool({
 async function getCities() {
     return pool.query(`SELECT id, name FROM city`)
         .then((data) => {
-            console.log(data);
+            //console.log(data);
+            return data.rows;
+        })
+}
+
+async function getRestaurants() {
+    return pool.query(`SELECT id, name, picture, city_id FROM restaurant`)
+        .then((data) => {
             return data.rows;
         })
 }
 
 export default {
-    getCities
+    getCities, getRestaurants
 }

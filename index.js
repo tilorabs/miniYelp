@@ -12,4 +12,12 @@ app.get('/cities', (req, res) => {
     })
 })
 
+app.get('/restaurants', (req, res) => {
+    db.getRestaurants()
+    .then((data) => {res.json(data)})
+    .catch((err) => {
+        res.status(400).send({error: err.message})
+    })
+})
+
 app.listen(port, () => console.log('Server listening at ' + port));
