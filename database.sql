@@ -6,6 +6,7 @@ create table city (
 create table restaurant (
     id serial primary key,
     name varchar(255),
+    picture varchar(255),
     city_id int,
     FOREIGN KEY (city_id) REFERENCES city(id)
 );
