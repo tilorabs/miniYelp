@@ -31,6 +31,11 @@ create table restaurant_has_tags (
     FOREIGN KEY (id_tag) REFERENCES tag(id)
 );
 
+drop table restaurant;
+drop table comment;
+drop table city;
+drop table restaurant_has_tags;
+
 insert into city (name) values ('Berlin');
 insert into city (name) values ('Amsterdam');
 insert into city (name) values ('Oslo');
