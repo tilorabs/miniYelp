@@ -2,7 +2,7 @@ import express from 'express';
 import db from "./controller/pg_controller.js";
 const app = express();
 app.use(express.json());
-const port = 8080 || process.env.PG_PORT;
+const port = process.env.PORT || 8080;
 
 app.get('/cities', (req, res) => {
     db.getCities()
