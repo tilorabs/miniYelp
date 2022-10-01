@@ -62,14 +62,30 @@ insert into restaurant (name, picture, city_id) values (
 insert into restaurant (name, picture, city_id) values (
     'Nguyen Kitchen Sushi & More',
     'https://s3-media0.fl.yelpcdn.com/bphoto/VPGXAwzkvAmxFa8DHiQl8Q/o.jpg',
-    2
-    );
-insert into restaurant (name, picture, city_id) values ('Sampurna','https://s3-media0.fl.yelpcdn.com/bphoto/i6mPn3NRB8rYKXsuFsmoyw/o.jpg', 2);
-insert into restaurant (name, picture, city_id) values ('Café De Klos','https://s3-media0.fl.yelpcdn.com/bphoto/y5dzj3AbNoSHvrQfg4dTdw/o.jpg', 2);
-insert into restaurant (name, picture, city_id) values ('RED','https://s3-media0.fl.yelpcdn.com/bphoto/5pvjDGML_Zp8IaXRSFmxtg/o.jpg', 3);
-insert into restaurant (name, picture, city_id) values ('Wurst & Schnitzelhaus - WuSH','https://s3-media0.fl.yelpcdn.com/bphoto/34Yj3Gs06LgmtBBnQUZbrg/o.jpg', 3);
-insert into restaurant (name, picture, city_id) values ('King/s Joy', 'https://youimg1.tripcdn.com/target/01067120008rrnyk81A4A.jpg',4);
-insert into restaurant (name, picture, city_id) values ('Pantry', 'https://s3-media0.fl.yelpcdn.com/bphoto/kAI1aJQg_BwCCYdQPkKs6g/o.jpg',4);
+    2);
+insert into restaurant (name, picture, city_id) values (
+    'Sampurna',
+    'https://s3-media0.fl.yelpcdn.com/bphoto/i6mPn3NRB8rYKXsuFsmoyw/o.jpg', 
+    2);
+insert into restaurant (name, picture, city_id) values (
+    'Café De Klos',
+    'https://s3-media0.fl.yelpcdn.com/bphoto/y5dzj3AbNoSHvrQfg4dTdw/o.jpg', 
+    2);
+insert into restaurant (name, picture, city_id) values (
+    'RED',
+'https://s3-media0.fl.yelpcdn.com/bphoto/5pvjDGML_Zp8IaXRSFmxtg/o.jpg',
+ 3);
+insert into restaurant (name, picture, city_id) values (
+    'Wurst & Schnitzelhaus - WuSH','https://s3-media0.fl.yelpcdn.com/bphoto/34Yj3Gs06LgmtBBnQUZbrg/o.jpg',
+     3);
+insert into restaurant (name, picture, city_id) values (
+    'King/s Joy', 
+    'https://youimg1.tripcdn.com/target/01067120008rrnyk81A4A.jpg',
+    4);
+insert into restaurant (name, picture, city_id) values (
+    'Pantry',
+     'https://s3-media0.fl.yelpcdn.com/bphoto/kAI1aJQg_BwCCYdQPkKs6g/o.jpg',
+     4);
 
 
 insert into comment (text, date, restaurant_id) values ('The food is alright.  Wait staff is so rude. There are better Indian restaurants out there.',
