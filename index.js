@@ -12,6 +12,15 @@ app.get('/cities', (req, res) => {
     })
 })
 
+app.get('/cities/:id', (req, res) => {
+    const {id} = req.params;
+    db.getCityById(id)
+    .then((data) => {res.json(data)})
+    .catch((err) => {
+        res.status(400).send({error: err.message})
+    })
+});
+
 app.get('/restaurants', (req, res) => {
     db.getRestaurants()
     .then((data) => {res.json(data)})
@@ -19,5 +28,31 @@ app.get('/restaurants', (req, res) => {
         res.status(400).send({error: err.message})
     })
 })
+
+app.get('/restaurants/:id', (req, res) => {
+    const {id} = req.params;
+    db.getRestaurantById(id)
+    .then((data) => {res.json(data)})
+    .catch((err) => {
+        res.status(400).send({error: err.message})
+    })
+});
+
+app.get('/tags', (req, res) => {
+    db.getTags()
+    .then((data) => {res.json(data)})
+    .catch((err) => {
+        res.status(400).send({error: err.message})
+    })
+})
+
+app.get('/tags/:id', (req, res) => {
+    const {id} = req.params;
+    db.getTagById(id)
+    .then((data) => {res.json(data)})
+    .catch((err) => {
+        res.status(400).send({error: err.message})
+    })
+});
 
 app.listen(port, () => console.log('Server listening at ' + port));
