@@ -45,10 +45,16 @@ async function getRestaurants() {
 }
 
 async function getRestaurantById(id) {
-    const data = await pool.query('SELECT id, name, picture, city_id FROM restaurant WHERE id=$1;', [id]);
+    const data = await pool.query('SELECT r.id, r.name, r.picture, r.city_id FROM restaurant r WHERE r.id=$1;', [id]);
+    data.rows[0].comments = await getCommentsByRestaurantId(id);
+    return (data.rows);
+}
+
+async function getCommentsByRestaurantId(id) {
+    const data = await pool.query('SELECT c.text, c.date FROM comment c WHERE c.restaurant_id=$1;', [id]);
     return (data.rows);
 }
 
 export default {
-    getCities, getRestaurants, getTags, getCityById, getRestaurantById, getTagById
+    getCities, getRestaurants, getTags, getCityById, getRestaurantById, getTagById, getCommentsByRestaurantId
 }
