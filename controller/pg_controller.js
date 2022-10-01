@@ -16,9 +16,25 @@ const pool = new Pool({
 async function getCities() {
     return pool.query(`SELECT id, name FROM city`)
         .then((data) => {
-            //console.log(data);
             return data.rows;
         })
+}
+
+async function getCityById(id) {
+    const data = await pool.query('SELECT id, name FROM city WHERE id=$1;', [id]);
+    return (data.rows);
+}
+
+async function getTags() {
+    return pool.query(`SELECT id, name FROM tag`)
+        .then((data) => {
+            return data.rows;
+        })
+}
+
+async function getTagById(id) {
+    const data = await pool.query('SELECT id, name FROM tag WHERE id=$1;', [id]);
+    return (data.rows);
 }
 
 async function getRestaurants() {
@@ -28,6 +44,11 @@ async function getRestaurants() {
         })
 }
 
+async function getRestaurantById(id) {
+    const data = await pool.query('SELECT id, name, picture, city_id FROM restaurant WHERE id=$1;', [id]);
+    return (data.rows);
+}
+
 export default {
-    getCities, getRestaurants
+    getCities, getRestaurants, getTags, getCityById, getRestaurantById, getTagById
 }
