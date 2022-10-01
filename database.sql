@@ -62,7 +62,14 @@ insert into comment (text, date, restaurant_id) values ('Wonderful dining experi
 My husband likes Indian food but after Dishoom, he has changed his tune!  Our adult boys were with us, youngest was studying abroad in London & they love it too. 
 Our son wished he would have discovered it while he was there, rather than on the last day of our visit to pick him up & bring him home!  Great food,
 lots of variety for all tastes.  Definitely a crowd pleaser!', '2022-04-05', 6);
+insert into comment (text, date, restaurant_id) values ('The food is alright.  Wait staff is not rude. There are better Chinese restaurants out there.', '2022-05-01', 2);
+
+insert into tag (name) values ('Italian cuisine');
+insert into tag (name) values ('German cuisine');
+insert into tag (name) values ('Asian Cuisine');
+insert into tag (name) values ('coffee light meal');
 
 select * from restaurant;
 select * from city;
 select * from comment;
+select * from tag;
