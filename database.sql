@@ -117,14 +117,6 @@ insert into tag (name) values ('German cuisine');
 insert into tag (name) values ('Asian Cuisine');
 insert into tag (name) values ('coffee light meal');
 
-insert into restaurant_has_tags (id_restaurant, id_tag) values (2, 1);
-insert into restaurant_has_tags (id_restaurant, id_tag) values (4, 2);
-insert into restaurant_has_tags (id_restaurant, id_tag) values (10, 2);
-insert into restaurant_has_tags (id_restaurant, id_tag) values (6, 3);
-insert into restaurant_has_tags (id_restaurant, id_tag) values (7, 3);
-insert into restaurant_has_tags (id_restaurant, id_tag) values (3, 4);
-insert into restaurant_has_tags (id_restaurant, id_tag) values (8, 4);
-
 select * from restaurant;
 select * from city;
 select * from comment;
