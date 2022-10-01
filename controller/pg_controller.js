@@ -62,5 +62,5 @@ async function getRestaurantsByTagId(id) {
 }
 
 export default {
-    getCities, getRestaurants, getTags, getCityById, getRestaurantById, getTagById, getCommentsByRestaurantId
+    getCities, getRestaurants, getTags, getCityById, getRestaurantById, getTagById
 }
